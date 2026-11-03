@@ -4,6 +4,8 @@
 
 换会话、重启、上下文被压缩——人设和事实都还在。
 
+> 名字说明：npm 包叫 **`dsh-persona-card`**，GitHub 仓库叫 **`dsh-persona-memory`**（仓库先建、包名后发现被占用）。装的时候认 npm 名，clone 的时候认仓库名，文中出现两者都是这一个插件。
+
 ```
 ## 你的长期记忆（跨会话，重启后还在）
 
@@ -54,7 +56,7 @@ pnpm add dsh-persona-card
 ```yaml
 - insert:
     - id: persona-memory
-      name: dsh-persona-memory
+      name: dsh-persona-card
       config:
         cardMaxChars: 900
 ```
