@@ -1,0 +1,18 @@
+- insert:
+    - id: persona-memory
+      name: dsh-persona-memory
+      config:
+        # 留空则用 $DSH_HOME/persona-memory（没有 DSH_HOME 时 ~/.dsh/persona-memory）
+        dataDir: ''
+        # 卡片字数上限：每步都会重发一遍，别设太大
+        cardMaxChars: 900
+        # 卡片里最多放几条事实
+        cardMaxFacts: 14
+        # 是否把 profile.md 也放进卡片
+        includeProfile: true
+        # 是否注入系统提示（关掉就只剩工具，适合自己拼提示词的人）
+        injectPrompt: true
+        # 提示词段的排序，越小越靠前
+        promptOrder: 100
+        # 每天第一次启动时跑一次衰减
+        autoDecay: true

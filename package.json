@@ -1,0 +1,39 @@
+{
+  "name": "dsh-persona-memory",
+  "version": "0.1.0",
+  "description": "Cross-session long-term memory for DSH agents: a ≤900-char persona card, four memory tools, and daily decay.",
+  "type": "module",
+  "main": "src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "smoke": "node scripts/smoke.mjs",
+    "import": "node scripts/import.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "persona",
+    "long-term-memory",
+    "agent"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "facts": [
+    {
+      "id": "m0001",
+      "text": "爸爸不喜欢别人叫他大佬",
+      "kind": "preference",
+      "tags": ["称呼"],
+      "importance": 0.9,
+      "weight": 0.9,
+      "tier": "core",
+      "status": "active",
+      "createdAt": 1762000000000,
+      "updatedAt": 1762000000000,
+      "lastMentionedAt": 1762000000000,
+      "mentions": 2,
+      "source": "agent"
+    },
+    {
+      "id": "m0002",
+      "text": "周末一起看《葬送的芙莉莲》",
+      "kind": "promise",
+      "tags": ["周末", "动画"],
+      "importance": 0.75,
+      "weight": 0.75,
+      "tier": "important",
+      "status": "active",
+      "createdAt": 1762000000000,
+      "updatedAt": 1762000000000,
+      "lastMentionedAt": 1762000000000,
+      "mentions": 1,
+      "source": "agent"
+    },
+    {
+      "id": "m0003",
+      "text": "他在做抖音直播，内容是玩我的世界",
+      "kind": "fact",
+      "tags": ["直播", "MC"],
+      "importance": 0.7,
+      "weight": 0.7,
+      "tier": "important",
+      "status": "active",
+      "createdAt": 1762000000000,
+      "updatedAt": 1762000000000,
+      "lastMentionedAt": 1762000000000,
+      "mentions": 1,
+      "source": "agent"
+    }
+  ]
+}
