@@ -34,7 +34,7 @@
 
 ```bash
 # 1. 放进 profile 的插件目录（或者任意你喜欢的位置）
-git clone https://github.com/ChencLi819/dsh-persona-memory.git \
+git clone https://github.com/DSHXiaoYu/dsh-persona-memory.git \
   ~/.dsh/profiles/desktop/plugins/persona-memory
 
 # 2. 让 profile 能解析到它：在 profile 的 package.json 里加一条
