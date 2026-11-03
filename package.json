@@ -30,6 +30,15 @@
     "long-term-memory",
     "agent"
   ],
+  "author": "ChencLi819",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChencLi819/dsh-persona-memory.git"
+  },
+  "homepage": "https://github.com/ChencLi819/dsh-persona-memory#readme",
+  "bugs": {
+    "url": "https://github.com/ChencLi819/dsh-persona-memory/issues"
+  },
   "license": "MIT",
   "dsh": {
     "bundle": {
