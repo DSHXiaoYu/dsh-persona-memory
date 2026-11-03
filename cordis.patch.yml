@@ -1,6 +1,6 @@
 - insert:
     - id: persona-memory
-      name: dsh-persona-card
+      name: dsh-persona-memory-card
       config:
         # 留空则用 $DSH_HOME/persona-memory（没有 DSH_HOME 时 ~/.dsh/persona-memory）
         dataDir: ''

@@ -1,10 +1,10 @@
-# dsh-persona-card
+# dsh-persona-memory-card
 
 给 [DSH](https://github.com/deepseek-ai/dsh) agent 的**跨会话长期记忆**：每次模型调用前，把「她是谁 + 她记得的事」压成一段 ≤900 字的卡片塞进系统提示；四个工具用来记、查、忘、看；每天自动衰减一次。
 
 换会话、重启、上下文被压缩——人设和事实都还在。
 
-> 名字说明：npm 包叫 **`dsh-persona-card`**，GitHub 仓库叫 **`dsh-persona-memory`**（仓库先建、包名后发现被占用）。装的时候认 npm 名，clone 的时候认仓库名，文中出现两者都是这一个插件。
+> 名字说明：npm 包叫 **`dsh-persona-memory-card`**，GitHub 仓库叫 **`dsh-persona-memory`**（仓库先建、包名后发现被占用）。装的时候认 npm 名，clone 的时候认仓库名，文中出现两者都是这一个插件。
 
 ```
 ## 你的长期记忆（跨会话，重启后还在）
@@ -40,7 +40,7 @@ git clone https://github.com/DSHXiaoYu/dsh-persona-memory.git \
   ~/.dsh/profiles/desktop/plugins/persona-memory
 
 # 2. 让 profile 能解析到它：在 profile 的 package.json 里加一条
-#    "dependencies": { "dsh-persona-card": "file:./plugins/persona-memory" }
+#    "dependencies": { "dsh-persona-memory-card": "file:./plugins/persona-memory" }
 #    然后 pnpm install
 ```
 
@@ -48,7 +48,7 @@ git clone https://github.com/DSHXiaoYu/dsh-persona-memory.git \
 
 ```bash
 cd ~/.dsh/profiles/desktop
-pnpm add dsh-persona-card
+pnpm add dsh-persona-memory-card
 ```
 
 **然后在 `cordis.patch.yml` 里插一条：**
@@ -56,7 +56,7 @@ pnpm add dsh-persona-card
 ```yaml
 - insert:
     - id: persona-memory
-      name: dsh-persona-card
+      name: dsh-persona-memory-card
       config:
         cardMaxChars: 900
 ```
@@ -197,7 +197,7 @@ src/index.mjs   插件入口：提示词段 + 4 个工具 + /memory 命令
 
 ## English
 
-`dsh-persona-card` is a zero-dependency DSH plugin that gives an agent cross-session memory: a ≤900-character persona card injected into the system prompt, four tools (`memory_remember` / `memory_recall` / `memory_forget` / `memory_status`), and daily decay with archival. All data is local JSON/Markdown. Lexical search only (CJK bigrams + BM25-lite); pluggable embeddings are on the roadmap.
+`dsh-persona-memory-card` is a zero-dependency DSH plugin that gives an agent cross-session memory: a ≤900-character persona card injected into the system prompt, four tools (`memory_remember` / `memory_recall` / `memory_forget` / `memory_status`), and daily decay with archival. All data is local JSON/Markdown. Lexical search only (CJK bigrams + BM25-lite); pluggable embeddings are on the roadmap.
 
 ## License
 
