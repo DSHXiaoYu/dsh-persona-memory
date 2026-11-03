@@ -1,4 +1,4 @@
-# dsh-persona-memory
+# dsh-persona-card
 
 给 [DSH](https://github.com/deepseek-ai/dsh) agent 的**跨会话长期记忆**：每次模型调用前，把「她是谁 + 她记得的事」压成一段 ≤900 字的卡片塞进系统提示；四个工具用来记、查、忘、看；每天自动衰减一次。
 
@@ -38,7 +38,7 @@ git clone https://github.com/DSHXiaoYu/dsh-persona-memory.git \
   ~/.dsh/profiles/desktop/plugins/persona-memory
 
 # 2. 让 profile 能解析到它：在 profile 的 package.json 里加一条
-#    "dependencies": { "dsh-persona-memory": "file:./plugins/persona-memory" }
+#    "dependencies": { "dsh-persona-card": "file:./plugins/persona-memory" }
 #    然后 pnpm install
 ```
 
@@ -46,7 +46,7 @@ git clone https://github.com/DSHXiaoYu/dsh-persona-memory.git \
 
 ```bash
 cd ~/.dsh/profiles/desktop
-pnpm add dsh-persona-memory
+pnpm add dsh-persona-card
 ```
 
 **然后在 `cordis.patch.yml` 里插一条：**
@@ -195,7 +195,7 @@ src/index.mjs   插件入口：提示词段 + 4 个工具 + /memory 命令
 
 ## English
 
-`dsh-persona-memory` is a zero-dependency DSH plugin that gives an agent cross-session memory: a ≤900-character persona card injected into the system prompt, four tools (`memory_remember` / `memory_recall` / `memory_forget` / `memory_status`), and daily decay with archival. All data is local JSON/Markdown. Lexical search only (CJK bigrams + BM25-lite); pluggable embeddings are on the roadmap.
+`dsh-persona-card` is a zero-dependency DSH plugin that gives an agent cross-session memory: a ≤900-character persona card injected into the system prompt, four tools (`memory_remember` / `memory_recall` / `memory_forget` / `memory_status`), and daily decay with archival. All data is local JSON/Markdown. Lexical search only (CJK bigrams + BM25-lite); pluggable embeddings are on the roadmap.
 
 ## License
 

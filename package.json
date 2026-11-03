@@ -1,5 +1,5 @@
 {
-  "name": "dsh-persona-memory",
+  "name": "dsh-persona-card",
   "version": "0.1.0",
   "description": "Cross-session long-term memory for DSH agents: a ≤900-char persona card, four memory tools, and daily decay.",
   "type": "module",
